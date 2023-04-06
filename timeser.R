@@ -1,2 +1,3 @@
 library(xts)
-xts(km.df[,10], km.df[,2])
+datetime <- km.df[,2] + km.df[,3] * 60 * 60
+km.xts <- xts(km.df[,10], datetime)
